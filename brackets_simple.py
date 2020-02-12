@@ -1,11 +1,12 @@
 def check(s):
+    # return success or fail for string
     s = s.replace(' ', '')
     while len(s) > 0:
         if s == s.replace('[]', '').replace('()', '').replace('{}', ''):
-            return 'wrong'
+            return 'fail'
         else:
             s = s.replace('[]', '').replace('()', '').replace('{}', '')
-    return 'right'
+    return 'success'
 
 
 if __name__ == '__main__':
