@@ -10,7 +10,14 @@ class Object:
                 self.__dict__[k] = v
 
 
-class Advert:
+class ColorizeMixin:
+    def __str__(self):
+        return f'\033[1;{self.repr_color_code};48m {self.__repr__()}'
+
+
+class Advert(ColorizeMixin):
+    repr_color_code = 32  # green
+
     def __init__(self, mapping):
         self.price = 0
         self.__dict__.update(Object(mapping).__dict__)
@@ -18,6 +25,9 @@ class Advert:
             raise ValueError("Title is required parameter")
         if self.price < 0:
             raise ValueError("Price must be >= 0")
+
+    def __repr__(self):
+        return f'{self.title} | {self.price} ₽'
 
 
 if __name__ == "__main__":
@@ -33,3 +43,6 @@ if __name__ == "__main__":
     lesson_ad = Advert(lesson)
     print(lesson_ad.location.address)
     print(lesson_ad.price)
+
+    iphone_ad = Advert({'title': 'iPhone X', 'price': 100})
+    print(iphone_ad)
