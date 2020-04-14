@@ -11,8 +11,10 @@ class Object:
 
 
 class ColorizeMixin:
+    ENDC = '\033[0m'
+
     def __str__(self):
-        return f'\033[1;{self.repr_color_code};48m {self.__repr__()}'
+        return f'\033[1;{self.repr_color_code};48m' + self.__repr__() + self.ENDC
 
 
 class Advert(ColorizeMixin):
