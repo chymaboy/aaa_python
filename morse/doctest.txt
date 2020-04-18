@@ -1,0 +1,24 @@
+>>> from morse import encode
+
+>>> encode('')
+''
+
+>>> encode(' ')
+' '
+
+>>> encode('  ')
+'   '
+
+>>> encode('SOS')
+'... --- ...'
+
+>>> encode('a')
+Traceback (most recent call last):
+KeyError: 'a'
+
+>>> encode(1)
+Traceback (most recent call last):
+TypeError: 'int' object is not iterable
+
+>>> encode('123456789') # doctest: +ELLIPSIS
+'.---- ... ----.'
