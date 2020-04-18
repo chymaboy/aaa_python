@@ -1,0 +1,6 @@
+(aaa_python) ➜  one_hot_encoder git:(ohe) ✗ python -m unittest one_hot_encoder.py
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
