@@ -1,0 +1,94 @@
+(aaa_python) ➜  morse git:(morse) ✗ python -m doctest -v doctest.txt
+Trying:
+    from morse import encode
+Expecting nothing
+ok
+Trying:
+    encode('')
+Expecting:
+    ''
+ok
+Trying:
+    encode(' ')
+Expecting:
+    ' '
+ok
+Trying:
+    encode('  ')
+Expecting:
+    '   '
+ok
+Trying:
+    encode('SOS')
+Expecting:
+    '... --- ...'
+ok
+Trying:
+    encode('a')
+Expecting:
+    Traceback (most recent call last):
+    KeyError: 'a'
+ok
+Trying:
+    encode(1)
+Expecting:
+    Traceback (most recent call last):
+    TypeError: 'int' object is not iterable
+ok
+Trying:
+    encode('123456789') # doctest: +ELLIPSIS
+Expecting:
+    '.---- ... ----.'
+ok
+1 items passed all tests:
+   8 tests in doctest.txt
+8 tests in 1 items.
+8 passed and 0 failed.
+Test passed.
+(aaa_python) ➜  morse git:(morse) ✗ python -m doctest -v doctest.txt
+Trying:
+    from morse import encode
+Expecting nothing
+ok
+Trying:
+    encode('')
+Expecting:
+    ''
+ok
+Trying:
+    encode(' ')
+Expecting:
+    ' '
+ok
+Trying:
+    encode('  ')
+Expecting:
+    '   '
+ok
+Trying:
+    encode('SOS')
+Expecting:
+    '... --- ...'
+ok
+Trying:
+    encode('a')
+Expecting:
+    Traceback (most recent call last):
+    KeyError: 'a'
+ok
+Trying:
+    encode(1)
+Expecting:
+    Traceback (most recent call last):
+    TypeError: 'int' object is not iterable
+ok
+Trying:
+    encode('123456789') # doctest: +ELLIPSIS
+Expecting:
+    '.---- ... ----.'
+ok
+1 items passed all tests:
+   8 tests in doctest.txt
+8 tests in 1 items.
+8 passed and 0 failed.
+Test passed.
