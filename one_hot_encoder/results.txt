@@ -4,3 +4,15 @@
 Ran 4 tests in 0.000s
 
 OK
+
+
+
+(aaa_python) ➜  one_hot_encoder git:(ohe-pytest) ✗ python -m pytest one_hot_encoder.py
+====================================================================================== test session starts =======================================================================================
+platform darwin -- Python 3.6.5, pytest-5.4.1, py-1.8.1, pluggy-0.13.1
+rootdir: /Users/epchumachenko/Documents/github/aaa_python/one_hot_encoder
+collected 8 items
+
+one_hot_encoder.py ........                                                                                                                                                                [100%]
+
+======================================================================================= 8 passed in 0.03s ========================================================================================

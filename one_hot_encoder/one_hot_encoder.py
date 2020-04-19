@@ -1,5 +1,6 @@
 from typing import List, Tuple
 import unittest
+import pytest
 
 
 class TestTF(unittest.TestCase):
@@ -20,6 +21,25 @@ class TestTF(unittest.TestCase):
     def test_type(self):
         actual = fit_transform(['a', 'b', 'c'])
         self.assertIsInstance(actual, List)
+
+
+def test_empty():
+    assert fit_transform([]) == []
+
+
+def test_exception():
+    with pytest.raises(TypeError):
+        fit_transform()
+
+
+def test_type():
+    assert type(fit_transform('pass')) == list
+
+
+def test_similarity():
+    x = [1, 2, 3]
+    y = [4, 5, 6]
+    assert fit_transform(x)[0][1] == fit_transform(y)[0][1]
 
 
 def fit_transform(*args: str) -> List[Tuple[str, List[int]]]:
