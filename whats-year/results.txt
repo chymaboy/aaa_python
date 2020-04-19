@@ -1,0 +1,10 @@
+(aaa_python) ➜  whats-year git:(whats-year) ✗ coverage run -m unittest what_is_year_now.py
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+OK
+(aaa_python) ➜  whats-year git:(whats-year) ✗ coverage report -m
+Name                  Stmts   Miss  Cover   Missing
+---------------------------------------------------
+what_is_year_now.py      33      0   100%
